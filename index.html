@@ -21,9 +21,10 @@
         </div>
         <!-- Desktop Navigation Links -->
         <div class="hidden md:flex items-center gap-8 text-sm">
+          <a href="index.html" class="hover:text-neutral-700">Startseite</a>
           <a href="about.html" class="hover:text-neutral-700">Über uns</a>
           <a href="philosophy.html" class="hover:text-neutral-700">Anlagephilosophie</a>
-          <a href="#services" class="hover:text-neutral-700">Dienstleistungen</a>
+          <a href="kunden.html" class="hover:text-neutral-700">Kunden</a>
           <a href="publications.html" class="hover:text-neutral-700">Publikationen</a>
         </div>
         <!-- Contact Button -->
@@ -37,97 +38,8 @@
       </nav>
     </header>
 
-    <!-- Hero Section with new Altstadt image -->
-    <section class="relative isolate pt-24">
-      <div class="mx-auto max-w-7xl px-5">
-        <div class="rounded-2xl overflow-hidden border border-neutral-200">
-          <div class="relative">
-            <!-- Use the uploaded image instead of the Wikipedia link -->
-            <img
-              src="solothurn-altstadt.jpg"
-              alt="Solothurn Altstadt"
-              class="w-full h-[520px] object-cover"
-            />
-            <div class="absolute inset-0 bg-neutral-950/40"></div>
-            <div class="absolute inset-0 flex items-center">
-              <div class="px-8 md:px-16">
-                <h1
-                  class="font-serif text-white text-4xl md:text-6xl leading-tight"
-                >
-                  Vermögensverwaltung mit Weitsicht
-                </h1>
-                <p
-                  class="mt-5 text-neutral-100 max-w-2xl text-lg"
-                >
-                  Seit 2018 begleiten wir Privatpersonen, Familien und Unternehmen
-                  aus dem Mittelland auf ihrem Weg zum langfristigen
-                  Vermögensaufbau.<br />
-                  Wir sind die AAP – Active Advisory Partners, Ihr
-                  Vermögensverwalter aus Solothurn. Unabhängig, transparent,
-                  persönlich.<br />
-                  Als FINMA zertifizierter Vermögensverwalter bauen wir auf
-                  Vertrauen und Sicherheit.
-                </p>
-                <div class="mt-8 flex gap-4">
-                  <a
-                    href="#contact"
-                    class="rounded-full bg-white px-6 py-3 text-neutral-900 font-medium hover:bg-neutral-100"
-                    >Gespräch starten</a
-                  >
-                  <a
-                    href="philosophy.html"
-                    class="rounded-full border border-white/70 px-6 py-3 text-white hover:bg-white/10"
-                    >Ansatz kennenlernen</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section with new Brücke image -->
-    <section id="about" class="py-20">
-      <div
-        class="mx-auto max-w-7xl px-5 grid md:grid-cols-2 gap-12 items-center"
-      >
-        <!-- Text column -->
-        <div>
-          <p class="text-sm tracking-wide uppercase text-neutral-600">Seit 2018</p>
-          <h2 class="mt-2 font-serif text-3xl md:text-4xl">
-            Wir begleiten Privatpersonen, Familien und Unternehmen aus dem
-            Mittelland beim langfristigen Vermögensaufbau
-          </h2>
-          <p class="mt-6 text-neutral-700">
-            Wir sind die AAP Active Advisory Partners, Ihr Vermögensverwalter aus
-            Solothurn. Unabhängig, transparent, persönlich. Als FINMA
-            zertifizierter Vermögensverwalter bauen wir auf Vertrauen und
-            Sicherheit.
-          </p>
-          <div class="mt-8">
-            <a
-              href="#team"
-              class="rounded-full border border-neutral-900 px-5 py-3 text-sm font-medium hover:bg-neutral-900 hover:text-white"
-              >Lernen Sie uns kennen</a
-            >
-          </div>
-        </div>
-        <!-- Image column -->
-        <div
-          class="rounded-2xl overflow-hidden border border-neutral-200 shadow-sm"
-        >
-          <!-- Use the uploaded bridge image instead of the Wikipedia link -->
-          <img
-            src="solothurn-bruecke.jpg"
-            alt="Solothurn Brücke"
-            class="w-full h-full object-cover"
-          />
-        </div>
-      </div>
-    </section>
-
-    <!-- Services Section -->
+    <!-- Services Section as the main content of the start page -->
+    <main class="pt-24">
     <section id="services" class="py-20 bg-white">
       <div class="mx-auto max-w-7xl px-5">
         <h3 class="font-serif text-3xl md:text-4xl">Unsere Dienstleistungen</h3>
@@ -250,29 +162,8 @@
       </div>
     </section>
 
-    <!-- Philosophy Section -->
-    <section id="philosophy" class="py-20 bg-neutral-50">
-      <div class="mx-auto max-w-7xl px-5">
-        <h3 class="font-serif text-3xl md:text-4xl">Langfristig investieren, Werte schaffen</h3>
-        <p class="mt-6 max-w-3xl text-neutral-700">
-          Wir investieren mit Disziplin und klaren Regeln. Fundamentale
-          Qualität, Risikobewusstsein und Kostenkontrolle stehen im Zentrum.
-          Portfolios werden konsequent auf Ziele, Zeithorizont und
-          Risikotragfähigkeit ausgerichtet.
-        </p>
-      </div>
-    </section>
-
-    <!-- Publications Section -->
-    <section id="publications" class="py-16 bg-white">
-      <div class="mx-auto max-w-7xl px-5">
-        <h3 class="font-serif text-2xl md:text-3xl">Publikationen</h3>
-        <p class="mt-4 text-neutral-700">
-          Aktuelle Einschätzungen und Analysen. Auf Wunsch senden wir Beiträge
-          per E‑Mail zu.
-        </p>
-      </div>
-    </section>
+    <!-- End of main content -->
+    </main>
 
     <!-- Contact & Newsletter Section -->
     <section id="contact" class="py-20 bg-neutral-900 text-white">
@@ -345,9 +236,10 @@
         <div>
           <h5 class="text-sm font-semibold text-white">Navigation</h5>
           <ul class="mt-3 space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-white">Startseite</a></li>
             <li><a href="about.html" class="hover:text-white">Über uns</a></li>
             <li><a href="philosophy.html" class="hover:text-white">Anlagephilosophie</a></li>
-            <li><a href="#services" class="hover:text-white">Dienstleistungen</a></li>
+            <li><a href="kunden.html" class="hover:text-white">Kunden</a></li>
             <li><a href="publications.html" class="hover:text-white">Publikationen</a></li>
           </ul>
         </div>
