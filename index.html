@@ -1,216 +1,408 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Active Advisory Partners</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="min-h-screen w-full bg-neutral-50 text-neutral-900">
-<header class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200">
-  <nav class="mx-auto max-w-7xl px-5 h-16 flex items-center justify-between">
-    <div class="flex items-center gap-3">
-      <img src="logo.png" alt="AAP Logo" class="h-8 w-auto">
-    </div>
-    <div class="hidden md:flex items-center gap-8 text-sm">
-      <button class="hover:text-neutral-700" onclick="scrollToSection('about')">Über uns</button>
-      <button class="hover:text-neutral-700" onclick="scrollToSection('philosophy')">Anlagephilosophie</button>
-      <button class="hover:text-neutral-700" onclick="scrollToSection('services')">Dienstleistungen</button>
-      <button class="hover:text-neutral-700" onclick="scrollToSection('publications')">Publikationen</button>
-    </div>
-    <div>
-      <button onclick="scrollToSection('contact')" class="rounded-full border border-neutral-900 px-5 py-2 text-neutral-900 text-sm font-medium hover:bg-neutral-900 hover:text-white transition">Kontakt</button>
-    </div>
-  </nav>
-</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Active Advisory Partners</title>
+    <!-- Tailwind CSS via CDN for quick styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen w-full bg-neutral-50 text-neutral-900">
+    <!-- Header / Top Bar -->
+    <header
+      class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200"
+    >
+      <nav
+        class="mx-auto max-w-7xl px-5 h-16 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+          <img src="logo.png" alt="AAP Logo" class="h-8 w-auto" />
+        </div>
+        <!-- Desktop Navigation Links -->
+        <div class="hidden md:flex items-center gap-8 text-sm">
+          <a href="#about" class="hover:text-neutral-700">Über uns</a>
+          <a href="#philosophy" class="hover:text-neutral-700">Anlagephilosophie</a>
+          <a href="#services" class="hover:text-neutral-700">Dienstleistungen</a>
+          <a href="#publications" class="hover:text-neutral-700">Publikationen</a>
+        </div>
+        <!-- Contact Button -->
+        <div>
+          <a
+            href="#contact"
+            class="rounded-full border border-neutral-900 px-5 py-2 text-neutral-900 text-sm font-medium hover:bg-neutral-900 hover:text-white transition"
+            >Kontakt</a
+          >
+        </div>
+      </nav>
+    </header>
 
-<section class="relative isolate pt-24">
-  <div class="mx-auto max-w-7xl px-5">
-    <div class="rounded-2xl overflow-hidden border border-neutral-200">
-      <div class="relative">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Solothurn_Aare_Altstadt.jpg" alt="Solothurn Altstadt" class="w-full h-[520px] object-cover">
-        <div class="absolute inset-0 bg-neutral-950/40"></div>
-        <div class="absolute inset-0 flex items-center">
-          <div class="px-8 md:px-16">
-            <h1 class="font-serif text-white text-4xl md:text-6xl leading-tight">Vermögensverwaltung mit Weitsicht</h1>
-            <p class="mt-5 text-neutral-100 max-w-2xl text-lg">Unabhängig, transparent, persönlich. Beratung mit klarer Verantwortung und konsequenter Umsetzung.</p>
-            <div class="mt-8 flex gap-4">
-              <button onclick="scrollToSection('contact')" class="rounded-full bg-white px-6 py-3 text-neutral-900 font-medium hover:bg-neutral-100">Gespräch starten</button>
-              <button onclick="scrollToSection('philosophy')" class="rounded-full border border-white/70 px-6 py-3 text-white hover:bg-white/10">Ansatz kennenlernen</button>
+    <!-- Hero Section with new Altstadt image -->
+    <section class="relative isolate pt-24">
+      <div class="mx-auto max-w-7xl px-5">
+        <div class="rounded-2xl overflow-hidden border border-neutral-200">
+          <div class="relative">
+            <!-- Use the uploaded image instead of the Wikipedia link -->
+            <img
+              src="solothurn-altstadt.jpg"
+              alt="Solothurn Altstadt"
+              class="w-full h-[520px] object-cover"
+            />
+            <div class="absolute inset-0 bg-neutral-950/40"></div>
+            <div class="absolute inset-0 flex items-center">
+              <div class="px-8 md:px-16">
+                <h1
+                  class="font-serif text-white text-4xl md:text-6xl leading-tight"
+                >
+                  Vermögensverwaltung mit Weitsicht
+                </h1>
+                <p
+                  class="mt-5 text-neutral-100 max-w-2xl text-lg"
+                >
+                  Unabhängig, transparent, persönlich. Beratung mit klarer
+                  Verantwortung und konsequenter Umsetzung.
+                </p>
+                <div class="mt-8 flex gap-4">
+                  <a
+                    href="#contact"
+                    class="rounded-full bg-white px-6 py-3 text-neutral-900 font-medium hover:bg-neutral-100"
+                    >Gespräch starten</a
+                  >
+                  <a
+                    href="#philosophy"
+                    class="rounded-full border border-white/70 px-6 py-3 text-white hover:bg-white/10"
+                    >Ansatz kennenlernen</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section id="about" class="py-20">
-  <div class="mx-auto max-w-7xl px-5 grid md:grid-cols-2 gap-12 items-center">
-    <div>
-      <p class="text-sm tracking-wide uppercase text-neutral-600">Seit 2018</p>
-      <h2 class="mt-2 font-serif text-3xl md:text-4xl">Wir begleiten Privatpersonen, Familien und Unternehmen aus dem Mittelland beim langfristigen Vermögensaufbau</h2>
-      <p class="mt-6 text-neutral-700">Wir sind die AAP Active Advisory Partners, Ihr Vermögensverwalter aus Solothurn. Unabhängig, transparent, persönlich. Als FINMA zertifizierter Vermögensverwalter bauen wir auf Vertrauen und Sicherheit.</p>
-      <div class="mt-8">
-        <button onclick="scrollToSection('team')" class="rounded-full border border-neutral-900 px-5 py-3 text-sm font-medium hover:bg-neutral-900 hover:text-white">Lernen Sie uns kennen</button>
-      </div>
-    </div>
-    <div class="rounded-2xl overflow-hidden border border-neutral-200 shadow-sm">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Solothurn_Aare_Bruecke.jpg" alt="Solothurn Brücke" class="w-full h-full object-cover">
-    </div>
-  </div>
-</section>
-
-<section id="services" class="py-20 bg-white">
-  <div class="mx-auto max-w-7xl px-5">
-    <h3 class="font-serif text-3xl md:text-4xl">Unsere Dienstleistungen</h3>
-    <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="group rounded-2xl border border-neutral-200 p-6 bg-white hover:shadow-md transition">
-        <div class="h-40 w-full rounded-xl overflow-hidden mb-5">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Solothurn_St_Ursenkathedrale.jpg" alt="Vermögensverwaltung" class="w-full h-full object-cover">
+    <!-- About Section with new Brücke image -->
+    <section id="about" class="py-20">
+      <div
+        class="mx-auto max-w-7xl px-5 grid md:grid-cols-2 gap-12 items-center"
+      >
+        <!-- Text column -->
+        <div>
+          <p class="text-sm tracking-wide uppercase text-neutral-600">Seit 2018</p>
+          <h2 class="mt-2 font-serif text-3xl md:text-4xl">
+            Wir begleiten Privatpersonen, Familien und Unternehmen aus dem
+            Mittelland beim langfristigen Vermögensaufbau
+          </h2>
+          <p class="mt-6 text-neutral-700">
+            Wir sind die AAP Active Advisory Partners, Ihr Vermögensverwalter aus
+            Solothurn. Unabhängig, transparent, persönlich. Als FINMA
+            zertifizierter Vermögensverwalter bauen wir auf Vertrauen und
+            Sicherheit.
+          </p>
+          <div class="mt-8">
+            <a
+              href="#team"
+              class="rounded-full border border-neutral-900 px-5 py-3 text-sm font-medium hover:bg-neutral-900 hover:text-white"
+              >Lernen Sie uns kennen</a
+            >
+          </div>
         </div>
-        <h4 class="text-xl font-semibold">Vermögensverwaltung</h4>
-        <p class="mt-2 text-sm text-neutral-700">Massgeschneiderte Anlageportfolios zugeschnitten auf persönliche Bedürfnisse und Anlegerprofil. Sie geben die Richtung vor, wir kümmern uns um die Umsetzung.</p>
-        <div class="mt-5">
-          <button onclick="scrollToSection('contact')" class="text-sm font-medium underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-900">Mehr erfahren</button>
-        </div>
-      </div>
-      <div class="group rounded-2xl border border-neutral-200 p-6 bg-white hover:shadow-md transition">
-        <div class="h-40 w-full rounded-xl overflow-hidden mb-5">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/Solothurn_altstadt_gasse.jpg" alt="Anlageberatung" class="w-full h-full object-cover">
-        </div>
-        <h4 class="text-xl font-semibold">Anlageberatung</h4>
-        <p class="mt-2 text-sm text-neutral-700">Sie haben Erfahrung beim Investieren und suchen einen professionellen Sparringpartner. Wir liefern Informationen, Meinungen und Analysen. Gemeinsam beleuchten wir Möglichkeiten aus mehreren Blickwinkeln.</p>
-        <div class="mt-5">
-          <button onclick="scrollToSection('contact')" class="text-sm font-medium underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-900">Mehr erfahren</button>
+        <!-- Image column -->
+        <div
+          class="rounded-2xl overflow-hidden border border-neutral-200 shadow-sm"
+        >
+          <!-- Use the uploaded bridge image instead of the Wikipedia link -->
+          <img
+            src="solothurn-bruecke.jpg"
+            alt="Solothurn Brücke"
+            class="w-full h-full object-cover"
+          />
         </div>
       </div>
-      <div class="group rounded-2xl border border-neutral-200 p-6 bg-white hover:shadow-md transition">
-        <div class="h-40 w-full rounded-xl overflow-hidden mb-5">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Solothurn_Stadt.jpg" alt="Finanzierungen" class="w-full h-full object-cover">
-        </div>
-        <h4 class="text-xl font-semibold">Finanzierungen</h4>
-        <p class="mt-2 text-sm text-neutral-700">Begleitung bei Eigenheim, Renditeliegenschaften und Unternehmenskrediten. Struktur, Varianten, Bewertung, Verhandlung.</p>
-        <div class="mt-5">
-          <button onclick="scrollToSection('contact')" class="text-sm font-medium underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-900">Mehr erfahren</button>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+      <div class="mx-auto max-w-7xl px-5">
+        <h3 class="font-serif text-3xl md:text-4xl">Unsere Dienstleistungen</h3>
+        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Vermögensverwaltung -->
+          <div
+            class="group rounded-2xl border border-neutral-200 p-6 bg-white hover:shadow-md transition"
+          >
+            <div class="h-40 w-full rounded-xl overflow-hidden mb-5">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/4/47/Solothurn_St_Ursenkathedrale.jpg"
+                alt="Vermögensverwaltung"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h4 class="text-xl font-semibold">Vermögensverwaltung</h4>
+            <p class="mt-2 text-sm text-neutral-700">
+              Massgeschneiderte Anlageportfolios zugeschnitten auf persönliche
+              Bedürfnisse und Anlegerprofil. Sie geben die Richtung vor, wir
+              kümmern uns um die Umsetzung.
+            </p>
+            <div class="mt-5">
+              <a
+                href="#contact"
+                class="text-sm font-medium underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-900"
+                >Mehr erfahren</a
+              >
+            </div>
+          </div>
+          <!-- Anlageberatung -->
+          <div
+            class="group rounded-2xl border border-neutral-200 p-6 bg-white hover:shadow-md transition"
+          >
+            <div class="h-40 w-full rounded-xl overflow-hidden mb-5">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/61/Solothurn_altstadt_gasse.jpg"
+                alt="Anlageberatung"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h4 class="text-xl font-semibold">Anlageberatung</h4>
+            <p class="mt-2 text-sm text-neutral-700">
+              Sie haben Erfahrung beim Investieren und suchen einen
+              professionellen Sparringpartner. Wir liefern Informationen,
+              Meinungen und Analysen. Gemeinsam beleuchten wir Möglichkeiten
+              aus mehreren Blickwinkeln.
+            </p>
+            <div class="mt-5">
+              <a
+                href="#contact"
+                class="text-sm font-medium underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-900"
+                >Mehr erfahren</a
+              >
+            </div>
+          </div>
+          <!-- Finanzierungen -->
+          <div
+            class="group rounded-2xl border border-neutral-200 p-6 bg-white hover:shadow-md transition"
+          >
+            <div class="h-40 w-full rounded-xl overflow-hidden mb-5">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Solothurn_Stadt.jpg"
+                alt="Finanzierungen"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h4 class="text-xl font-semibold">Finanzierungen</h4>
+            <p class="mt-2 text-sm text-neutral-700">
+              Begleitung bei Eigenheim, Renditeliegenschaften und
+              Unternehmenskrediten. Struktur, Varianten, Bewertung,
+              Verhandlung.
+            </p>
+            <div class="mt-5">
+              <a
+                href="#contact"
+                class="text-sm font-medium underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-900"
+                >Mehr erfahren</a
+              >
+            </div>
+          </div>
+          <!-- Vorsorgeplanung -->
+          <div
+            class="group rounded-2xl border border-neutral-200 p-6 bg-white hover:shadow-md transition"
+          >
+            <div class="h-40 w-full rounded-xl overflow-hidden mb-5">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Solothurn_Aareufer.jpg"
+                alt="Vorsorgeplanung"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h4 class="text-xl font-semibold">Vorsorgeplanung</h4>
+            <p class="mt-2 text-sm text-neutral-700">
+              Rechtzeitig planen und Vorteile sichern. Sinnvolle
+              Staffelung von Vorsorgegeldern, Budgetplanung und
+              Einkommensszenarien.
+            </p>
+            <div class="mt-5">
+              <a
+                href="#contact"
+                class="text-sm font-medium underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-900"
+                >Mehr erfahren</a
+              >
+            </div>
+          </div>
+          <!-- Nachfolgeplanung -->
+          <div
+            class="group rounded-2xl border border-neutral-200 p-6 bg-white hover:shadow-md transition"
+          >
+            <div class="h-40 w-full rounded-xl overflow-hidden mb-5">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Solothurn_Marktplatz.jpg"
+                alt="Nachfolgeplanung"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h4 class="text-xl font-semibold">Nachfolgeplanung</h4>
+            <p class="mt-2 text-sm text-neutral-700">
+              Vermögen oder Unternehmen geordnet übergeben. Der Prozess
+              braucht Vertrauen und Zeit. Wir gestalten die Schritte
+              gemeinsam.
+            </p>
+            <div class="mt-5">
+              <a
+                href="#contact"
+                class="text-sm font-medium underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-900"
+                >Mehr erfahren</a
+              >
+            </div>
+          </div>
+          <!-- Steuern und Stiftungen -->
+          <div
+            class="group rounded-2xl border border-neutral-200 p-6 bg-white hover:shadow-md transition"
+          >
+          <div class="h-40 w-full rounded-xl overflow-hidden mb-5">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/91/Solothurn_Bundesplatz.jpg"
+              alt="Steuern und Stiftungen"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <h4 class="text-xl font-semibold">Steuern und Stiftungen</h4>
+          <p class="mt-2 text-sm text-neutral-700">
+            Steuersituation analysieren, Stiftungen aufbauen oder
+            Transaktionen steuerlich planen.
+          </p>
+          <div class="mt-5">
+            <a
+              href="#contact"
+              class="text-sm font-medium underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-900"
+              >Mehr erfahren</a
+            >
+          </div>
+          </div>
         </div>
       </div>
-      <div class="group rounded-2xl border border-neutral-200 p-6 bg-white hover:shadow-md transition">
-        <div class="h-40 w-full rounded-xl overflow-hidden mb-5">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Solothurn_Aareufer.jpg" alt="Vorsorgeplanung" class="w-full h-full object-cover">
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="py-20 bg-neutral-50">
+      <div class="mx-auto max-w-7xl px-5">
+        <h3 class="font-serif text-3xl md:text-4xl">Langfristig investieren, Werte schaffen</h3>
+        <p class="mt-6 max-w-3xl text-neutral-700">
+          Wir investieren mit Disziplin und klaren Regeln. Fundamentale
+          Qualität, Risikobewusstsein und Kostenkontrolle stehen im Zentrum.
+          Portfolios werden konsequent auf Ziele, Zeithorizont und
+          Risikotragfähigkeit ausgerichtet.
+        </p>
+      </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="py-16 bg-white">
+      <div class="mx-auto max-w-7xl px-5">
+        <h3 class="font-serif text-2xl md:text-3xl">Publikationen</h3>
+        <p class="mt-4 text-neutral-700">
+          Aktuelle Einschätzungen und Analysen. Auf Wunsch senden wir Beiträge
+          per E‑Mail zu.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact & Newsletter Section -->
+    <section id="contact" class="py-20 bg-neutral-900 text-white">
+      <div
+        class="mx-auto max-w-7xl px-5 grid md:grid-cols-2 gap-12 items-start"
+      >
+        <!-- Contact column -->
+        <div>
+          <h3 class="font-serif text-3xl md:text-4xl">
+            Sprechen wir über Ihre Ziele
+          </h3>
+          <p class="mt-4 text-neutral-300">
+            Kurzes Gespräch, klare Einschätzung und ein Vorschlag für die
+            nächsten Schritte.
+          </p>
+          <form onsubmit="return false" class="mt-8 grid grid-cols-1 gap-4">
+            <input
+              class="rounded-xl bg-white/10 border border-white/20 px-4 py-3 placeholder-neutral-300 focus:outline-none focus:ring-2 focus:ring-white/40"
+              placeholder="Name"
+            />
+            <input
+              type="email"
+              class="rounded-xl bg-white/10 border border-white/20 px-4 py-3 placeholder-neutral-300 focus:outline-none focus:ring-2 focus:ring-white/40"
+              placeholder="E‑Mail"
+            />
+            <textarea
+              rows="4"
+              class="rounded-xl bg-white/10 border border-white/20 px-4 py-3 placeholder-neutral-300 focus:outline-none focus:ring-2 focus:ring-white/40"
+              placeholder="Nachricht"
+            ></textarea>
+            <button
+              class="rounded-full bg-white text-neutral-900 px-6 py-3 font-medium hover:bg-neutral-100"
+            >
+              Anfrage senden
+            </button>
+          </form>
         </div>
-        <h4 class="text-xl font-semibold">Vorsorgeplanung</h4>
-        <p class="mt-2 text-sm text-neutral-700">Rechtzeitig planen und Vorteile sichern. Sinnvolle Staffelung von Vorsorgegeldern, Budgetplanung und Einkommensszenarien.</p>
-        <div class="mt-5">
-          <button onclick="scrollToSection('contact')" class="text-sm font-medium underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-900">Mehr erfahren</button>
+        <!-- Newsletter column -->
+        <div class="rounded-2xl border border-white/10 p-6">
+          <h4 class="text-xl font-semibold">Newsletter</h4>
+          <p class="mt-2 text-neutral-300">
+            Analysen, Einblicke und kurze Updates. Massvoll und relevant.
+          </p>
+          <form onsubmit="return false" class="mt-5 flex gap-3">
+            <input
+              type="email"
+              class="min-w-0 flex-1 rounded-full bg-white px-4 py-3 text-neutral-900 placeholder-neutral-500 focus:outline-none"
+              placeholder="Ihre E‑Mail"
+            />
+            <button
+              class="rounded-full border border-white px-5 py-3 text-white hover:bg-white/10"
+            >
+              Abonnieren
+            </button>
+          </form>
         </div>
       </div>
-      <div class="group rounded-2xl border border-neutral-200 p-6 bg-white hover:shadow-md transition">
-        <div class="h-40 w-full rounded-xl overflow-hidden mb-5">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Solothurn_Marktplatz.jpg" alt="Nachfolgeplanung" class="w-full h-full object-cover">
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-950 text-neutral-300">
+      <div
+        class="mx-auto max-w-7xl px-5 py-12 grid sm:grid-cols-2 md:grid-cols-4 gap-8"
+      >
+        <div>
+          <img src="logo.png" alt="AAP Logo" class="h-8 w-auto" />
+          <p class="mt-3 text-sm">Active Advisory Partners AG</p>
+          <p class="text-sm">Solothurn</p>
         </div>
-        <h4 class="text-xl font-semibold">Nachfolgeplanung</h4>
-        <p class="mt-2 text-sm text-neutral-700">Vermögen oder Unternehmen geordnet übergeben. Der Prozess braucht Vertrauen und Zeit. Wir gestalten die Schritte gemeinsam.</p>
-        <div class="mt-5">
-          <button onclick="scrollToSection('contact')" class="text-sm font-medium underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-900">Mehr erfahren</button>
+        <div>
+          <h5 class="text-sm font-semibold text-white">Navigation</h5>
+          <ul class="mt-3 space-y-2 text-sm">
+            <li><a href="#about" class="hover:text-white">Über uns</a></li>
+            <li><a href="#philosophy" class="hover:text-white">Anlagephilosophie</a></li>
+            <li><a href="#services" class="hover:text-white">Dienstleistungen</a></li>
+            <li><a href="#publications" class="hover:text-white">Publikationen</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-sm font-semibold text-white">Services</h5>
+          <ul class="mt-3 space-y-2 text-sm">
+            <li>Vermögensverwaltung</li>
+            <li>Anlageberatung</li>
+            <li>Vorsorgeplanung</li>
+            <li>Nachfolgeplanung</li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-sm font-semibold text-white">Rechtliches</h5>
+          <ul class="mt-3 space-y-2 text-sm">
+            <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white">Impressum</a></li>
+          </ul>
         </div>
       </div>
-      <div class="group rounded-2xl border border-neutral-200 p-6 bg-white hover:shadow-md transition">
-        <div class="h-40 w-full rounded-xl overflow-hidden mb-5">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Solothurn_Bundesplatz.jpg" alt="Steuern und Stiftungen" class="w-full h-full object-cover">
-        </div>
-        <h4 class="text-xl font-semibold">Steuern und Stiftungen</h4>
-        <p class="mt-2 text-sm text-neutral-700">Steuersituation analysieren, Stiftungen aufbauen oder Transaktionen steuerlich planen.</p>
-        <div class="mt-5">
-          <button onclick="scrollToSection('contact')" class="text-sm font-medium underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-900">Mehr erfahren</button>
+      <div class="border-t border-white/10">
+        <div class="mx-auto max-w-7xl px-5 py-6 text-xs text-neutral-500">
+          © 2025 Active Advisory Partners AG
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section id="philosophy" class="py-20 bg-neutral-50">
-  <div class="mx-auto max-w-7xl px-5">
-    <h3 class="font-serif text-3xl md:text-4xl">Langfristig investieren, Werte schaffen</h3>
-    <p class="mt-6 max-w-3xl text-neutral-700">Wir investieren mit Disziplin und klaren Regeln. Fundamentale Qualität, Risikobewusstsein und Kostenkontrolle stehen im Zentrum. Portfolios werden konsequent auf Ziele, Zeithorizont und Risikotragfähigkeit ausgerichtet.</p>
-  </div>
-</section>
-
-<section id="publications" class="py-16 bg-white">
-  <div class="mx-auto max-w-7xl px-5">
-    <h3 class="font-serif text-2xl md:text-3xl">Publikationen</h3>
-    <p class="mt-4 text-neutral-700">Aktuelle Einschätzungen und Analysen. Auf Wunsch senden wir Beiträge per E Mail zu.</p>
-  </div>
-</section>
-
-<section id="contact" class="py-20 bg-neutral-900 text-white">
-  <div class="mx-auto max-w-7xl px-5 grid md:grid-cols-2 gap-12 items-start">
-    <div>
-      <h3 class="font-serif text-3xl md:text-4xl">Sprechen wir über Ihre Ziele</h3>
-      <p class="mt-4 text-neutral-300">Kurzes Gespräch, klare Einschätzung und ein Vorschlag für die nächsten Schritte.</p>
-      <form onsubmit="event.preventDefault();" class="mt-8 grid grid-cols-1 gap-4">
-        <input class="rounded-xl bg-white/10 border border-white/20 px-4 py-3 placeholder-neutral-300 focus:outline-none focus:ring-2 focus:ring-white/40" placeholder="Name">
-        <input type="email" class="rounded-xl bg-white/10 border border-white/20 px-4 py-3 placeholder-neutral-300 focus:outline-none focus:ring-2 focus:ring-white/40" placeholder="E Mail">
-        <textarea rows="4" class="rounded-xl bg-white/10 border border-white/20 px-4 py-3 placeholder-neutral-300 focus:outline-none focus:ring-2 focus:ring-white/40" placeholder="Nachricht"></textarea>
-        <button class="rounded-full bg-white text-neutral-900 px-6 py-3 font-medium hover:bg-neutral-100">Anfrage senden</button>
-      </form>
-    </div>
-    <div class="rounded-2xl border border-white/10 p-6">
-      <h4 class="text-xl font-semibold">Newsletter</h4>
-      <p class="mt-2 text-neutral-300">Analysen, Einblicke und kurze Updates. Massvoll und relevant.</p>
-      <form onsubmit="event.preventDefault();" class="mt-5 flex gap-3">
-        <input type="email" class="min-w-0 flex-1 rounded-full bg-white px-4 py-3 text-neutral-900 placeholder-neutral-500 focus:outline-none" placeholder="Ihre E Mail">
-        <button class="rounded-full border border-white px-5 py-3 text-white hover:bg-white/10">Abonnieren</button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<footer class="bg-neutral-950 text-neutral-300">
-  <div class="mx-auto max-w-7xl px-5 py-12 grid sm:grid-cols-2 md:grid-cols-4 gap-8">
-    <div>
-      <img src="logo.png" alt="AAP Logo" class="h-8 w-auto">
-      <p class="mt-3 text-sm">Active Advisory Partners AG</p>
-      <p class="text-sm">Solothurn</p>
-    </div>
-    <div>
-      <h5 class="text-sm font-semibold text-white">Navigation</h5>
-      <ul class="mt-3 space-y-2 text-sm">
-        <li><a href="#" onclick="event.preventDefault(); scrollToSection('about')" class="hover:text-white">Über uns</a></li>
-        <li><a href="#" onclick="event.preventDefault(); scrollToSection('philosophy')" class="hover:text-white">Anlagephilosophie</a></li>
-        <li><a href="#" onclick="event.preventDefault(); scrollToSection('services')" class="hover:text-white">Dienstleistungen</a></li>
-        <li><a href="#" onclick="event.preventDefault(); scrollToSection('publications')" class="hover:text-white">Publikationen</a></li>
-      </ul>
-    </div>
-    <div>
-      <h5 class="text-sm font-semibold text-white">Services</h5>
-      <ul class="mt-3 space-y-2 text-sm">
-        <li>Vermögensverwaltung</li>
-        <li>Anlageberatung</li>
-        <li>Vorsorgeplanung</li>
-        <li>Nachfolgeplanung</li>
-      </ul>
-    </div>
-    <div>
-      <h5 class="text-sm font-semibold text-white">Rechtliches</h5>
-      <ul class="mt-3 space-y-2 text-sm">
-        <li><a class="hover:text-white" href="#">Privacy Policy</a></li>
-        <li><a class="hover:text-white" href="#">Impressum</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="border-t border-white/10">
-    <div class="mx-auto max-w-7xl px-5 py-6 text-xs text-neutral-500">© 2025 Active Advisory Partners AG</div>
-  </div>
-</footer>
-
-<script>
-function scrollToSection(id) {
-  const el = document.getElementById(id);
-  if (el) {
-    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-}
-</script>
-</body>
+    </footer>
+  </body>
 </html>
