@@ -9,32 +9,35 @@
   </head>
   <body class="min-h-screen w-full bg-neutral-50 text-neutral-900">
     <!-- Header / Top Bar -->
-       <header
+    <header
       class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200"
     >
-      <nav
-        class="mx-auto max-w-7xl px-5 h-16 flex items-center justify-start"
-      >
-        <div class="flex items-center gap-5">
-          <a href="index.html">
-            <img src="logo.png" alt="AAP Logo" class="h-8 w-auto" />
-          </a>
+             <nav
+             class="mx-auto max-w-7xl px-5 h-16 flex items-center justify-start"
+           >
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+          <img src="logo.png" alt="AAP Logo" class="h-8 w-auto" />
         </div>
-        <div class="hidden md:flex items-center gap-5 ml-auto text-sm">
+        <!-- Desktop Navigation Links including Contact -->
+        <div class="hidden md:flex items-center gap-2 ml-auto text-sm">
           <a href="index.html" class="hover:text-neutral-700">Startseite</a>
           <a href="about.html" class="hover:text-neutral-700">Über uns</a>
           <a href="philosophy.html" class="hover:text-neutral-700">Anlagephilosophie</a>
           <a href="publications.html" class="hover:text-neutral-700">Publikationen</a>
+          <!-- Contact link triggers modal instead of scrolling to contact section -->
           <a
-            href="index.html#contact"
+            href="#"
+            onclick="openModal(); return false;"
             class="rounded-full border border-neutral-900 px-5 py-2 text-neutral-900 text-sm font-medium hover:bg-neutral-900 hover:text-white transition"
             >Kontakt</a
           >
         </div>
       </nav>
     </header>
+
          <!-- Hero Section with Solothurn Altstadt image -->
-         <section class="relative isolate pt-24 pb-0">
+         <section class="relative isolate pt-24 pb-20">
       <div class="mx-auto max-w-7xl px-5">
         <div class="rounded-2xl overflow-hidden border border-neutral-200">
           <div class="relative">
@@ -55,15 +58,18 @@
                   Verantwortung und konsequenter Umsetzung.
                 </p>
                 <div class="mt-8 flex gap-4">
+                  <!-- CTAs open the contact modal -->
                   <a
-                    href="#contact"
+                    href="#"
+                    onclick="openModal(); return false;"
                     class="rounded-full bg-white px-6 py-3 text-neutral-900 font-medium hover:bg-neutral-100"
                     >Gespräch starten</a
                   >
                   <a
-                    href="philosophy.html"
+                    href="#"
+                    onclick="openModal(); return false;"
                     class="rounded-full border border-white/70 px-6 py-3 text-white hover:bg-white/10"
-                    >Ansatz kennenlernen</a
+                    >Lernen Sie unseren Ansatz kennen</a
                   >
                 </div>
               </div>
@@ -76,7 +82,7 @@
     <!-- Kunden Abschnitt entfernt: moved below services -->
 
         <!-- About Section with Solothurn Brücke image -->
-    <section id="about" class="py-0 mt-20">
+    <section id="about" class="py-20 mt-16">
       <div
         class="mx-auto max-w-7xl px-5 grid md:grid-cols-2 gap-12 items-center"
       >
@@ -116,7 +122,7 @@
 
         <!-- Services Section as the main content of the start page -->
         <main>
-    <section id="services" class="py-20 mt-8 bg-white">
+    <section id="services" class="py-20 mt-16 bg-white">
       <div class="mx-auto max-w-7xl px-5">
         <h3 class="font-serif text-3xl md:text-4xl">Unsere Dienstleistungen</h3>
         <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -239,7 +245,7 @@
     </section>
 
     <!-- Kunden Abschnitt (Clients) placed below services -->
-        <section id="clients" class="py-20 mt-0 bg-neutral-50">
+        <section id="clients" class="py-20 mt-16 bg-neutral-50">
       <div class="mx-auto max-w-7xl px-5">
         <h3 class="font-serif text-3xl md:text-4xl">Unsere Kunden</h3>
         <p class="mt-6 text-neutral-700">
@@ -253,8 +259,10 @@
           Banking, Asset Management und Family‑Office‑Services können wir Sie ganzheitlich unterstützen.
         </p>
         <div class="mt-8">
+          <!-- Kunden CTA opens modal instead of jumping to contact section -->
           <a
-            href="#contact"
+            href="#"
+            onclick="openModal(); return false;"
             class="rounded-full border border-neutral-900 px-6 py-3 text-sm font-medium hover:bg-neutral-900 hover:text-white"
             >Kontakt aufnehmen</a
           >
@@ -366,5 +374,56 @@
         </div>
       </div>
     </footer>
+
+    <!-- Contact Modal overlay -->
+    <div id="contactModal" class="hidden fixed inset-0 bg-neutral-950/50 flex items-center justify-center z-50">
+      <div class="bg-white rounded-2xl p-8 w-full max-w-lg relative">
+        <!-- Close button -->
+        <button
+          class="absolute top-4 right-4 text-neutral-600 hover:text-neutral-900"
+          onclick="closeModal()"
+          aria-label="Schliessen"
+        >✕</button>
+        <h3 class="text-2xl font-serif mb-4">Kontakt aufnehmen</h3>
+        <form onsubmit="event.preventDefault(); closeModal();" class="space-y-4">
+          <input
+            type="text"
+            class="w-full rounded-lg border border-neutral-300 px-4 py-3 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-neutral-900"
+            placeholder="Name"
+            required
+          />
+          <input
+            type="email"
+            class="w-full rounded-lg border border-neutral-300 px-4 py-3 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-neutral-900"
+            placeholder="E-Mail"
+            required
+          />
+          <input
+            type="tel"
+            class="w-full rounded-lg border border-neutral-300 px-4 py-3 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-neutral-900"
+            placeholder="Telefonnummer"
+          />
+          <textarea
+            rows="4"
+            class="w-full rounded-lg border border-neutral-300 px-4 py-3 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-neutral-900"
+            placeholder="Nachricht"
+          ></textarea>
+          <button
+            type="submit"
+            class="w-full rounded-full bg-neutral-900 text-white px-6 py-3 font-medium hover:bg-neutral-800"
+          >Nachricht senden</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal handling script -->
+    <script>
+      function openModal() {
+        document.getElementById('contactModal').classList.remove('hidden');
+      }
+      function closeModal() {
+        document.getElementById('contactModal').classList.add('hidden');
+      }
+    </script>
   </body>
 </html>
