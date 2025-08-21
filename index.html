@@ -426,6 +426,40 @@
       function closeModal() {
         document.getElementById('contactModal').classList.add('hidden');
       }
+<script>
+  function submitContactForm(event) {
+    event.preventDefault();
+    const form = document.getElementById('contactForm');
+    const name = form.name.value;
+    const email = form.email.value;
+    const phone = form.phone.value;
+    const message = form.message.value;
+    const consent = form.consent.checked;
+
+    if (!consent) {
+      alert('Bitte stimmen Sie der Datenschutzerklärung zu.');
+      return;
+    }
+
+    // Erzeugt ein Mailto‑Link mit allen Angaben
+    const mailto = `mailto:bartolotta@activeadvisory.ch,praktikant@activeadviory.ch` +
+      `?subject=Neue Anfrage von ${encodeURIComponent(name)}` +
+      `&body=Name: ${encodeURIComponent(name)}%0D` +
+      `E-Mail: ${encodeURIComponent(email)}%0D` +
+      `Telefon: ${encodeURIComponent(phone)}%0D` +
+      `Nachricht: ${encodeURIComponent(message)}`;
+
+    // Mail‑Client öffnen (oder Formular an Backend senden, falls gewünscht)
+    window.location.href = mailto;
+
+    // Erfolgsmeldung einblenden
+    document.getElementById('successMessage').classList.remove('hidden');
+
+    // Formular zurücksetzen
+    form.reset();
+  }
+</script>
+
     </script>
   </body>
 </html>
