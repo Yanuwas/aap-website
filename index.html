@@ -375,88 +375,57 @@
       </div>
     </footer>
 
-    <!-- Contact Modal overlay -->
-    <div id="contactModal" class="hidden fixed inset-0 bg-neutral-950/50 flex items-center justify-center z-50">
-      <div class="bg-white rounded-2xl p-8 w-full max-w-lg relative">
-        <!-- Close button -->
-        <button
-          class="absolute top-4 right-4 text-neutral-600 hover:text-neutral-900"
-          onclick="closeModal()"
-          aria-label="Schliessen"
-        >✕</button>
-        <h3 class="text-2xl font-serif mb-4">Kontakt aufnehmen</h3>
-        <form id="contactForm" onsubmit="submitContactForm(event)" class="space-y-4">
-  <div>
-    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-    <input type="text" id="name" name="name" class="w-full border border-gray-300 rounded p-2" required>
-  </div>
-  <div>
-    <label for="email" class="block text-sm font-medium text-gray-700">E-Mail</label>
-    <input type="email" id="email" name="email" class="w-full border border-gray-300 rounded p-2" required>
-  </div>
-  <div>
-    <label for="phone" class="block text-sm font-medium text-gray-700">Telefonnummer</label>
-    <input type="tel" id="phone" name="phone" class="w-full border border-gray-300 rounded p-2">
-  </div>
-  <div>
-    <label for="message" class="block text-sm font-medium text-gray-700">Nachricht</label>
-    <textarea id="message" name="message" rows="4" class="w-full border border-gray-300 rounded p-2" required></textarea>
-  </div>
-  <div class="flex items-center">
-    <input type="checkbox" id="consent" name="consent" class="mr-2" required>
-    <label for="consent" class="text-sm text-gray-700">
-      Ich stimme der <a href="datenschutzerklärung.pdf" class="underline">Datenschutzerklärung</a> zu.
-    </label>
-  </div>
-  <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded">Nachricht senden</button>
-</form>
-<div id="successMessage"
-     class="hidden mt-4 p-4 bg-green-100 border border-green-300 text-green-700 rounded">
-  Vielen Dank für Ihre Nachricht! Wir melden uns bei Ihnen.
-</div>
+   <!-- Kontakt Modal Overlay -->
+<div id="contactModal"
+     class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+  <div class="bg-white rounded-lg p-6 w-11/12 md:w-1/2 lg:w-1/3 relative">
+    <button type="button" onclick="closeModal()" aria-label="Close"
+            class="absolute top-3 right-3 text-gray-500">&times;</button>
 
+    <h3 class="text-xl font-semibold mb-4">Kontakt aufnehmen</h3>
+
+    <form id="contactForm" onsubmit="submitContactForm(event)" class="space-y-4">
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+        <input id="name" name="name" type="text"
+               class="w-full border border-gray-300 rounded p-2" required>
       </div>
+
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">E-Mail</label>
+        <input id="email" name="email" type="email"
+               class="w-full border border-gray-300 rounded p-2" required>
+      </div>
+
+      <div>
+        <label for="phone" class="block text-sm font-medium text-gray-700">Telefonnummer</label>
+        <input id="phone" name="phone" type="tel"
+               class="w-full border border-gray-300 rounded p-2">
+      </div>
+
+      <div>
+        <label for="message" class="block text-sm font-medium text-gray-700">Nachricht</label>
+        <textarea id="message" name="message" rows="4"
+                  class="w-full border border-gray-300 rounded p-2" required></textarea>
+      </div>
+
+      <div class="flex items-center">
+        <input id="consent" name="consent" type="checkbox" class="mr-2" required>
+        <label for="consent" class="text-sm text-gray-700">
+          Ich stimme der <a href="/privacy.html" class="underline">Datenschutzerklärung</a> zu.
+        </label>
+      </div>
+
+      <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded w-full">
+        Nachricht senden
+      </button>
+    </form>
+
+    <div id="successMessage"
+         class="hidden mt-4 p-4 bg-green-100 border border-green-300 text-green-700 rounded">
+      Vielen Dank für Ihre Nachricht. Wir melden uns bei Ihnen.
     </div>
-
-    <!-- Modal handling script -->
-    <script>
-      function openModal() {
-        document.getElementById('contactModal').classList.remove('hidden');
-      }
-      function closeModal() {
-        document.getElementById('contactModal').classList.add('hidden');
-      }
-<script>
-  function submitContactForm(event) {
-    event.preventDefault();
-    const form = document.getElementById('contactForm');
-    const name = form.name.value;
-    const email = form.email.value;
-    const phone = form.phone.value;
-    const message = form.message.value;
-    const consent = form.consent.checked;
-
-    if (!consent) {
-      alert('Bitte stimmen Sie der Datenschutzerklärung zu.');
-      return;
-    }
-    // Erzeugt ein Mailto‑Link mit allen Angaben
-    const mailto = `mailto:bartolotta@activeadvisory.ch,praktikant@activeadviory.ch` +
-      `?subject=Neue Anfrage von ${encodeURIComponent(name)}` +
-      `&body=Name: ${encodeURIComponent(name)}%0D` +
-      `E-Mail: ${encodeURIComponent(email)}%0D` +
-      `Telefon: ${encodeURIComponent(phone)}%0D` +
-      `Nachricht: ${encodeURIComponent(message)}`;
-
-    // Mail‑Client öffnen (oder Formular an Backend senden, falls gewünscht)
-    window.location.href = mailto;
-
-    // Erfolgsmeldung einblenden
-    document.getElementById('successMessage').classList.remove('hidden');
-
-    // Formular zurücksetzen
-    form.reset();
-  }
-    </script>
+  </div>
+</div>
   </body>
 </html>
