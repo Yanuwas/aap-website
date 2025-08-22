@@ -426,6 +426,53 @@
       Vielen Dank für Ihre Nachricht. Wir melden uns bei Ihnen.
     </div>
   </div>
-</div>
+</div><script>
+  function openModal() {
+    var m = document.getElementById('contactModal');
+    if (m) m.classList.remove('hidden');
+  }
+  function closeModal() {
+    var m = document.getElementById('contactModal');
+    if (m) m.classList.add('hidden');
+  }
+
+  function submitContactForm(event) {
+    event.preventDefault();
+
+    var form = document.getElementById('contactForm');
+    var name = form.name.value.trim();
+    var email = form.email.value.trim();
+    var phone = form.phone.value.trim();
+    var message = form.message.value.trim();
+    var consent = form.consent.checked;
+
+    if (!consent) {
+      alert('Bitte der Datenschutzerklärung zustimmen.');
+      return;
+    }
+
+    // Achtung: In deiner Vorgabe steht "praktikant@activeadviory.ch" ohne s.
+    // Wenn das ein Tippfehler ist, korrigiere zu activeadvisory.ch.
+    var to = 'bartolotta@activeadvisory.ch,praktikant@activeadviory.ch';
+
+    var subject = 'Neue Anfrage von ' + name;
+    var body =
+      'Name: ' + name + '%0D%0A' +
+      'E-Mail: ' + email + '%0D%0A' +
+      'Telefon: ' + phone + '%0D%0A' +
+      'Nachricht: ' + message;
+
+    var mailto = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) +
+                 '&body=' + body;
+
+    // Mailclient öffnen
+    window.location.href = mailto;
+
+    // Erfolg anzeigen
+    document.getElementById('successMessage').classList.remove('hidden');
+    form.reset();
+  }
+</script>
+
   </body>
 </html>
