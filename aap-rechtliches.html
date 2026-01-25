@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rechtliches – Active Advisory Partners</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen w-full bg-neutral-50 text-neutral-900">
+    <!-- Header -->
+    <header class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200">
+      <nav class="mx-auto max-w-7xl px-5 h-16 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <a href="index.html">
+            <img src="logo.png" alt="AAP Logo" class="h-12 md:h-14 w-auto" />
+          </a>
+        </div>
+        <div class="hidden md:flex items-center gap-2 ml-auto text-sm">
+          <a href="index.html" class="hover:text-neutral-700 px-3 py-2">Startseite</a>
+          <a href="about.html" class="hover:text-neutral-700 px-3 py-2">Über uns</a>
+          <a href="philosophy.html" class="hover:text-neutral-700 px-3 py-2">Anlagephilosophie</a>
+          <a href="publications.html" class="hover:text-neutral-700 px-3 py-2">Publikationen</a>
+          <a href="#" onclick="openModal(); return false;" class="rounded-full border border-neutral-900 px-5 py-2 text-neutral-900 text-sm font-medium hover:bg-neutral-900 hover:text-white transition">Kontakt</a>
+        </div>
+
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-neutral-100 transition" aria-label="Menü öffnen">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </nav>
+
+      <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-neutral-200 shadow-lg">
+        <div class="px-5 py-4 space-y-1">
+          <a href="index.html" class="block py-3 px-4 rounded-lg hover:bg-neutral-50">Startseite</a>
+          <a href="about.html" class="block py-3 px-4 rounded-lg hover:bg-neutral-50">Über uns</a>
+          <a href="philosophy.html" class="block py-3 px-4 rounded-lg hover:bg-neutral-50">Anlagephilosophie</a>
+          <a href="publications.html" class="block py-3 px-4 rounded-lg hover:bg-neutral-50">Publikationen</a>
+          <a href="#" onclick="openModal(); closeMobileMenu(); return false;" class="block mt-3 rounded-full border border-neutral-900 px-5 py-3 text-center text-neutral-900 font-medium hover:bg-neutral-900 hover:text-white transition">Kontakt</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="pt-24 bg-white">
+      <section class="py-12 md:py-20 bg-white">
+        <div class="mx-auto max-w-4xl px-5">
+          <h1 class="font-serif text-3xl md:text-5xl mb-8 md:mb-12 text-neutral-900">Rechtliches</h1>
+
+          <!-- Impressum Section -->
+          <div class="mb-12 md:mb-16">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-neutral-900">Impressum</h2>
+            
+            <div class="space-y-4 text-neutral-700">
+              <div>
+                <p class="font-semibold text-neutral-900">Active Advisory Partners AG</p>
+                <p>Poststrasse 2</p>
+                <p>4500 Solothurn</p>
+                <p>Schweiz</p>
+              </div>
+
+              <div>
+                <p><strong>Telefon:</strong> <a href="tel:+41325885588" class="hover:text-neutral-900">032 588 55 88</a></p>
+                <p><strong>E-Mail:</strong> <a href="mailto:info@activeadvisory.ch" class="hover:text-neutral-900">info@activeadvisory.ch</a></p>
+              </div>
+
+              <div class="pt-4">
+                <h3 class="font-semibold text-neutral-900 mb-2">Aufsichtsbehörde</h3>
+                <p>Eidgenössische Finanzmarktaufsicht FINMA</p>
+                <p>Laupenstrasse 27</p>
+                <p>3003 Bern</p>
+                <p>Schweiz</p>
+              </div>
+
+              <div class="pt-4">
+                <h3 class="font-semibold text-neutral-900 mb-2">Haftungsausschluss</h3>
+                <p class="leading-relaxed">
+                  Die Inhalte unserer Seiten wurden mit grösster Sorgfalt erstellt. Für die Richtigkeit, 
+                  Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. 
+                  Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten nach den allgemeinen 
+                  Gesetzen verantwortlich.
+                </p>
+              </div>
+
+              <div class="pt-4">
+                <h3 class="font-semibold text-neutral-900 mb-2">Urheberrecht</h3>
+                <p class="leading-relaxed">
+                  Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen 
+                  dem schweizerischen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede 
+                  Art der Verwertung ausserhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen 
+                  Zustimmung des jeweiligen Autors bzw. Erstellers.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Datenschutz Section -->
+          <div class="mb-12 md:mb-16 border-t border-neutral-200 pt-12">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-neutral-900">Datenschutzerklärung</h2>
+            
+            <div class="space-y-6 text-neutral-700">
+              <div>
+                <h3 class="text-xl font-semibold text-neutral-900 mb-3">1. Datenschutzerklärung</h3>
+                <p class="leading-relaxed">
+                  Die vorliegende Datenschutzerklärung klärt Sie über die Art, den Umfang und den Zweck der 
+                  Erhebung und Verwendung personenbezogener Daten auf unserer Website aap-solothurn.ch (im Folgenden „Website") 
+                  durch die Active Advisory Partners AG (im Folgenden „wir" oder „uns") auf und gibt über die Ihnen 
+                  zustehenden Rechte Auskunft. Diese Rechte richten sich nach den anwendbaren Datenschutzgesetzen.
+                </p>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-semibold text-neutral-900 mb-3">2. Verantwortlicher für die Datenbearbeitung</h3>
+                <p class="leading-relaxed mb-2">Verantwortlicher für die Datenbearbeitung auf dieser Website und Ansprechpartner für Datenschutzanliegen ist:</p>
+                <p class="leading-relaxed">
+                  Active Advisory Partners AG<br>
+                  Poststrasse 2, Solothurn<br>
+                  032 588 55 88<br>
+                  <a href="mailto:info@activeadvisory.ch" class="text-neutral-900 hover:underline">info@activeadvisory.ch</a>
+                </p>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-semibold text-neutral-900 mb-3">3. Datenerfassung auf dieser Website</h3>
+                
+                <h4 class="font-semibold text-neutral-900 mt-4 mb-2">3.1 Logfiles</h4>
+                <p class="leading-relaxed mb-3">Unsere Website wird von Hostpoint gehostet.</p>
+                <p class="leading-relaxed mb-3">
+                  Zur Optimierung und Aufrechterhaltung unserer Website protokollieren wir technische Fehler, die beim 
+                  Aufrufen unserer Website allenfalls auftreten. Ferner werden bei der Nutzung dieser Website automatisch 
+                  Informationen erhoben, die der Browser Ihres Endgeräts an unseren Host-Provider übermittelt. Dies sind:
+                </p>
+                <ul class="list-disc pl-6 space-y-1 mb-3">
+                  <li>IP-Adresse und Betriebssystem Ihres Endgeräts</li>
+                  <li>Browsertyp, Version, Sprache</li>
+                  <li>Datum und Uhrzeit der Serveranfrage</li>
+                  <li>aufgerufene Datei</li>
+                  <li>die Website, von der aus der Zugriff erfolgte (Referrer URL)</li>
+                  <li>den Status-Code (z.B. 404)</li>
+                  <li>das verwendete Übertragungsprotokoll (z.B. HTTP/2)</li>
+                </ul>
+                <p class="leading-relaxed mb-3">
+                  Diese Daten werden von unserem Host-Provider erhoben und gespeichert, um Prozesse und Abläufe 
+                  insbesondere in Zusammenhang mit der Nutzung unserer Website und der Sicherheit und Stabilität des 
+                  Computersystems optimieren zu können.
+                </p>
+                <p class="leading-relaxed mb-4">
+                  Weitere Informationen finden Sie in der Datenschutzerklärung der Hostpoint unter 
+                  <a href="https://www.hostpoint.ch/hostpoint/kontakt-agb.html#datenschutz" target="_blank" class="text-neutral-900 hover:underline">
+                    https://www.hostpoint.ch/hostpoint/kontakt-agb.html#datenschutz
+                  </a>
+                </p>
+                <p class="leading-relaxed">
+                  Sofern die DSGVO anwendbar ist, sind Grundlage für diese Datenbearbeitung Art. 6 Abs. 1 lit. f DSGVO.
+                </p>
+
+                <h4 class="font-semibold text-neutral-900 mt-6 mb-2">3.2 Kontaktformular</h4>
+                <p class="leading-relaxed mb-3">
+                  Wenn Sie unser Kontaktformular benutzen, werden Ihre Angaben aus dem Anfrageformular zur Bearbeitung 
+                  der Anfrage und für den Fall von Anschlussfragen von uns bearbeitet. In der Regel benötigen wir folgende Angaben:
+                </p>
+                <ul class="list-disc pl-6 space-y-1 mb-3">
+                  <li>Vor- und Nachname</li>
+                  <li>Firma</li>
+                  <li>E-Mail-Adresse</li>
+                  <li>Adresse</li>
+                  <li>Telefonnummer</li>
+                  <li>Betreff</li>
+                  <li>Nachrichteninhalt</li>
+                </ul>
+                <p class="leading-relaxed">
+                  Wir verwenden die von Ihnen mitgeteilten Daten, um Ihre Anfrage zu beantworten. Sofern die DSGVO 
+                  anwendbar ist, sind Grundlage für diese Datenbearbeitung Art. 6 Abs. 1 lit. F DSGVO.
+                </p>
+
+                <h4 class="font-semibold text-neutral-900 mt-6 mb-2">3.3 Cookies</h4>
+                <p class="leading-relaxed mb-3">
+                  Wir setzen auf unserer Website Cookies ein. Cookies sind kleine Dateien, die auf Ihrem Endgerät 
+                  abgelegt werden und die Ihr Browser speichert. Einige der von uns verwendeten Cookies werden 
+                  automatisch gelöscht, wenn Sie unsere Website verlassen. Andere Cookies bleiben auf Ihrem Endgerät 
+                  gespeichert, bis Sie diese löschen oder bis sie ablaufen. Diese Cookies ermöglichen es, Ihren Browser 
+                  beim nächsten Besuch unserer Website wiederzuerkennen.
+                </p>
+                <p class="leading-relaxed mb-3">
+                  In Ihrem Browser können Sie einstellen, dass Sie über das Setzen von Cookies vorab informiert werden 
+                  und im Einzelfall entscheiden können, ob Sie die Annahme von Cookies für bestimmte Fälle oder generell 
+                  ausschliessen, oder dass Cookies komplett verhindert werden.
+                </p>
+                <p class="leading-relaxed">
+                  Dadurch kann die Funktionalität der Website eingeschränkt werden. Cookies, die für den elektronischen 
+                  Kommunikationsvorgang oder von Ihnen gewünschte Funktionen erforderlich sind oder Ihr Benutzererlebnis 
+                  optimieren, werden – sofern die DSGVO anwendbar ist – auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO gespeichert.
+                </p>
+
+                <h4 class="font-semibold text-neutral-900 mt-6 mb-2">3.4 Newsletter</h4>
+                <p class="leading-relaxed mb-3">
+                  Wir bieten einen Newsletter an, den Sie abonnieren können. Wenn Sie sich für den Newsletter anmelden, 
+                  so erfassen wir mindestens Ihre E-Mail-Adresse. Unser externer Newsletter-Dienstleister kann weitere 
+                  Daten erfassen; wir verweisen hierzu auf seine Datenschutzerklärung (siehe unten).
+                </p>
+                <p class="leading-relaxed">
+                  Wir verwenden Ihre E-Mail-Adresse, um Ihnen den Newsletter per E-Mail zuzustellen. Sofern die DSGVO 
+                  anwendbar ist, ist Grundlage für die Datenbearbeitung Art. 6 Abs. 1 lit. F DSGVO.
+                </p>
+
+                <h4 class="font-semibold text-neutral-900 mt-6 mb-2">3.5 Newsletter-Analytics</h4>
+                <p class="leading-relaxed">
+                  Wir nutzen einen Analysedienst, um die Reichweite unseres Newsletters zu messen. Gemessen wird, wie oft 
+                  der Newsletter geöffnet wird und welchen Links der Empfänger folgt. Sofern die DSGVO anwendbar ist, ist 
+                  Grundlage für die Datenbearbeitung Art. 6 Abs. 1 lit. F DSGVO.
+                </p>
+
+                <h4 class="font-semibold text-neutral-900 mt-6 mb-2">3.6 Registrierung</h4>
+                <p class="leading-relaxed mb-3">
+                  Wenn Sie auf unserer Webseite ein Konto eröffnen, werden die von Ihnen eingegebenen Informationen 
+                  gespeichert. Wir erfassen folgende Angaben:
+                </p>
+                <ul class="list-disc pl-6 space-y-1 mb-3">
+                  <li>Vor- und Nachname</li>
+                  <li>Firma</li>
+                  <li>E-Mail-Adresse</li>
+                  <li>Adresse</li>
+                  <li>Telefonnummer</li>
+                </ul>
+                <p class="leading-relaxed">
+                  Wir verwenden die Daten, um Ihnen das Konto zur Verfügung stellen zu können. Sofern die DSGVO anwendbar 
+                  ist, sind Grundlage für diese Datenbearbeitung Art. 6 Abs. 1 lit. b und f DSGVO.
+                </p>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-semibold text-neutral-900 mb-3">4. Externe Dienste</h3>
+                <p class="leading-relaxed">
+                  Auf unserer Website setzen wir verschiedene Dienste von Drittanbietern ein. Nachfolgend legen wir im 
+                  Einzelnen dar, um welche Dienste es sich handelt, wofür wir sie einsetzen und welche Daten gesammelt werden. 
+                  Die Einbindung externer Dienste kann gemäss der aktuellen europäischen Rechtsprechung heikel sein. Die 
+                  Weitergabe von Personendaten an externe Anbieter (Beispiel: Analytics, Werbung, CDN, Fonts, Videos usw.) 
+                  sollte im Einzelfall analysiert werden.
+                </p>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-semibold text-neutral-900 mb-3">5. Links</h3>
+                <p class="leading-relaxed">
+                  Auf unserer Website finden Sie Links auf Seiten von Drittanbietern. Wir sind nicht verantwortlich für die 
+                  Inhalte und Datenschutzvorkehrungen auf externen Websites, welche Sie über die Links erreichen können. 
+                  Bitte informieren Sie sich über den Datenschutz direkt auf den entsprechenden Websites.
+                </p>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-semibold text-neutral-900 mb-3">6. Weitergabe von Daten an Dritte</h3>
+                <p class="leading-relaxed mb-3">
+                  Damit wir Ihnen die Informationen auf unserer Website anbieten können, arbeiten wir mit verschiedenen 
+                  Dienstleistern zusammen, namentlich mit IT-Dienstleistern, um Ihnen eine zeitgemässe Website anbieten zu 
+                  können. Diese verwenden Ihre Daten nur im Rahmen der Auftragsabwicklungen für uns.
+                </p>
+                <p class="leading-relaxed">
+                  Mit Ausnahme der Bestimmungen in Ziffer 3.4 dieser Datenschutzerklärung, nehmen wir eine Datenübermittlung 
+                  an Stellen ausserhalb der Schweiz und der Europäischen Union (Drittstaat) ohne Ihre Einwilligung nur vor, 
+                  sofern dies nach dem jeweiligen Vertrag erforderlich ist, zur Erfüllung gesetzlicher Verpflichtungen oder 
+                  zur Wahrung unserer berechtigten Interessen.
+                </p>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-semibold text-neutral-900 mb-3">7. Ihre Rechte</h3>
+                <p class="leading-relaxed mb-3">
+                  Soweit von dem auf Sie anwendbaren Datenschutzrecht vorgesehen, können Sie unentgeltlich Auskunft über die 
+                  auf Sie bezogenen gespeicherten Daten, deren Herkunft und Empfänger und den Zweck der Datenbearbeitung 
+                  verlangen. Ebenso steht Ihnen unter den gesetzlichen Voraussetzungen ein Recht auf Berichtigung, Löschung, 
+                  Einschränkung der oder Widerspruch gegen die Bearbeitung sowie, sofern die DSGVO zur Anwendung gelangt, auf 
+                  Herausgabe dieser Daten zur Übertragung an eine andere Stelle zu.
+                </p>
+                <p class="leading-relaxed mb-3">
+                  Eine von Ihnen erteilte Einwilligung können Sie mit Wirkung für die Zukunft jederzeit widerrufen. Dazu reicht 
+                  eine formlose Mitteilung per E-Mail an uns. Bitte beachten Sie, dass die vorstehenden Rechte gesetzlichen 
+                  Einschränkungen unterstehen und ggf. die Erbringung unserer Dienstleistungen beeinträchtigen oder 
+                  verunmöglichen können.
+                </p>
+                <p class="leading-relaxed">
+                  Sie sind berechtigt, Ihre Ansprüche gerichtlich durchzusetzen oder eine Beschwerde bei der zuständigen 
+                  Datenschutzbehörde einzureichen. Für die Schweiz ist der Eidgenössische Datenschutz- und Öffentlichkeitsbeauftragte 
+                  zuständig (<a href="http://www.edoeb.admin.ch" target="_blank" class="text-neutral-900 hover:underline">www.edoeb.admin.ch</a>).
+                </p>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-semibold text-neutral-900 mb-3">8. Aktualität und Änderung dieser Datenschutzerklärung</h3>
+                <p class="leading-relaxed">
+                  Wir können diese Datenschutzerklärung jederzeit ändern oder anpassen. Die aktuelle Datenschutzerklärung kann 
+                  auf <a href="https://www.aap-solothurn.ch/rechtliches" class="text-neutral-900 hover:underline">www.aap-solothurn.ch/rechtliches</a> abgerufen werden.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Informationen Section -->
+          <div class="mb-12 md:mb-16 border-t border-neutral-200 pt-12">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-neutral-900">Informationen</h2>
+            
+            <div class="space-y-6 text-neutral-700">
+              <div>
+                <h3 class="text-xl font-semibold text-neutral-900 mb-3">Aufsicht</h3>
+                <p class="leading-relaxed">
+                  Die Active Advisory Partners AG ist durch die AOOS der Aufsicht der FINMA unterstellt.
+                </p>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-semibold text-neutral-900 mb-3">Lizenz</h3>
+                <p class="leading-relaxed">
+                  Die Active Advisory Partners AG verfügt über eine FINMA-Lizenz als Vermögensverwalter gemäss Art. 17 FINIG.
+                </p>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-semibold text-neutral-900 mb-3">Ombudsstelle</h3>
+                <p class="leading-relaxed">
+                  Die Active Advisory Partners AG der FINOS-Ombudsstelle angeschlossen. Kommt es zu einem Konflikt mit der 
+                  Gesellschaft, so kann sich der Kunde an die Ombudsstelle wenden, welche versucht, neutral und unabhängig 
+                  eine Einigung zwischen den Parteien zu erzielen. Die Dienstleistung der Ombudsstellen ist grundsätzlich kostenlos.
+                </p>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-semibold text-neutral-900 mb-3">FIDLEG</h3>
+                <p class="leading-relaxed">
+                  Hier geht es zum FIDLEG 
+                  <a href="Kundeninformation_FIDLEG.pdf" target="_blank" class="text-neutral-900 hover:underline">
+                    Informationsschreiben
+                  </a>.
+                </p>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-semibold text-neutral-900 mb-3">Allgemeine Risiken im Handeln mit Finanzinstrumenten</h3>
+                <p class="leading-relaxed">
+                  Hier zu den 
+                  <a href="SBVg_Risiken_im_Handel_mit_Finanzinstrumenten_2019_DE.pdf" target="_blank" class="text-neutral-900 hover:underline">
+                    Risiken Handeln mit Finanzinstrumenten
+                  </a>.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-950 text-neutral-300">
+      <div class="mx-auto max-w-7xl px-5 py-8 md:py-12 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+        <div class="col-span-2 md:col-span-1">
+          <img src="logo.png" alt="AAP Logo" class="h-8 w-auto" />
+          <p class="mt-3 text-sm">Active Advisory Partners AG</p>
+          <p class="text-sm">Solothurn</p>
+        </div>
+        <div>
+          <h5 class="text-sm font-semibold text-white mb-3">Navigation</h5>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-white transition">Startseite</a></li>
+            <li><a href="about.html" class="hover:text-white transition">Über uns</a></li>
+            <li><a href="philosophy.html" class="hover:text-white transition">Anlagephilosophie</a></li>
+            <li><a href="publications.html" class="hover:text-white transition">Publikationen</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-sm font-semibold text-white mb-3">Services</h5>
+          <ul class="space-y-2 text-sm">
+            <li>Vermögensverwaltung</li>
+            <li>Anlageberatung</li>
+            <li>Vorsorgeplanung</li>
+            <li>Nachfolgeplanung</li>
+            <li>Steuern und Stiftungen</li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-sm font-semibold text-white mb-3">Rechtliches</h5>
+          <ul class="space-y-2 text-sm">
+            <li><a href="rechtliches.html" class="hover:text-white transition">Impressum & Datenschutz</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10">
+        <div class="mx-auto max-w-7xl px-5 py-4 md:py-6 text-xs text-neutral-500">
+          © 2025 Active Advisory Partners AG
+        </div>
+      </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+      <div class="bg-white rounded-2xl p-6 md:p-8 w-full max-w-lg relative max-h-[90vh] overflow-y-auto">
+        <button class="absolute top-4 right-4 text-neutral-400 hover:text-neutral-900 text-2xl leading-none transition" onclick="closeModal()" aria-label="Schließen">✕</button>
+        <h3 class="text-xl md:text-2xl font-serif mb-4 pr-8">Kontakt aufnehmen</h3>
+        <form action="https://formspree.io/f/mvzzyqlk" method="POST" class="space-y-4">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+            <input id="name" name="name" type="text" class="w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-neutral-900" required />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-Mail</label>
+            <input id="email" name="email" type="email" class="w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-neutral-900" required />
+          </div>
+          <div>
+            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Telefonnummer</label>
+            <input id="phone" name="phone" type="tel" class="w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-neutral-900" />
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Nachricht</label>
+            <textarea id="message" name="message" rows="4" class="w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-neutral-900" required></textarea>
+          </div>
+          <button type="submit" class="w-full rounded-full bg-neutral-900 text-white px-6 py-3 font-medium hover:bg-neutral-800 transition">Nachricht senden</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      
+      function closeMobileMenu() {
+        mobileMenu.classList.add('hidden');
+      }
+      
+      mobileMenuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+          closeMobileMenu();
+        }
+      });
+
+      function openModal() {
+        document.getElementById('contactModal').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+      
+      function closeModal() {
+        document.getElementById('contactModal').classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+      });
+
+      document.getElementById('contactModal')?.addEventListener('click', (e) => {
+        if (e.target.id === 'contactModal') closeModal();
+      });
+    </script>
+  </body>
+</html>
